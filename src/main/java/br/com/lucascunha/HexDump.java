@@ -1,6 +1,6 @@
 package br.com.lucascunha;
 
-public class App {
+public class HexDump {
     public static void main(String[] args) {
         String input = "Hello, world!";
         String xxdOutput = generateXxdOutput(input);
@@ -14,12 +14,12 @@ public class App {
         
         for (int i = 0; i < bytes.length; i += bytesPerLine) {
             // Print the offset
-            output.append(String.format("%08x: ", i));
+            output.append(String.format("%08d: ", i));
 
             // Print the hexadecimal representation
             for (int j = i; j < i + bytesPerLine; j++) {
                 if (j < bytes.length) {
-                    output.append(String.format("%02x", bytes[j]));
+                    output.append(String.format("%02x ", bytes[j]));
                 } else {
                     output.append("  ");
                 }
